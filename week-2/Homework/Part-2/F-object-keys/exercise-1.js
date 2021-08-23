@@ -19,11 +19,24 @@ let highScores = {
 };
 
 // ONLY EDIT BELOW HERE
+const[ key,values]=capitalCities;
+const[key1, value1]= highScores;
 
-let capitalCitiesKeys = ;
-let highScoresKeys = ;
-let capitalCitiesValues = ;
-let highScoresValues = ;
+let capitalCitiesKeys = capitalCities.forEach(function(el){
+  return el.key
+});
+console.log(capitalCitiesKeys) ; 
+let highScoresKeys = highScores.map(function(ele){
+  return ele.key1
+});
+  
+ 
+let capitalCitiesValues = capitalCities.map(function(el){
+  return el.values
+});  ;
+let highScoresValues =highScores.map(function(ele){
+  return ele.value1
+} ) ;
 
 // ONLY EDIT ABOVE HERE
 

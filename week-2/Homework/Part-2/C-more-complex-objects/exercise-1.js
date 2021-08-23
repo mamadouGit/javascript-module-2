@@ -26,7 +26,9 @@ let house = {
 /*
   DO NOT EDIT ANYTHING BELOW THIS LINE
 */
-
+house.address="51 Berkley Road";
+house.previousOwners= ["Brian M.", "Fiona S."];
+house.currentOwner.lastName="Montgomery";
 console.log(
   `Expected result: 51 Berkley Road. Actual result: ${house.address}`
 );

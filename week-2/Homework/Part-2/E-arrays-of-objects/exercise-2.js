@@ -40,11 +40,25 @@ WRITE YOUR CODE BELOW
 */
 
 
-let destinationNamesWithin500Kms = // Complete here
+let destinationNamesWithin500Kms = travelDestinations.filter(function(desti){
+   return desti.distanceKms<= 500;
+})
+    
+console.log(destinationNamesWithin500Kms)
+// Complete here
 
-let destinationNameReachableByFerry = // Complete here
+let destinationNameReachableByFerry = travelDestinations.filter(function(desti){
+    return desti.transportations.includes("ferry");
 
-let destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+})
+console.log(destinationNameReachableByFerry)
+// Complete here
+
+let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.filter(function(desti){
+     return desti.distanceKms>300 && desti.transportations.includes("train");
+})
+console.log(destinationNamesMoreThan300KmsAwayByTrain)
+// Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 
 
 /*

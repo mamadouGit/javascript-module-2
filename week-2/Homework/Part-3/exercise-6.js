@@ -6,6 +6,8 @@ Write all your code at the end of the file
 mentors that are in Barcelona and one of the skills is React
 "Hi, my name is {firstName} {lastName}. I work in Barcelona and i know React."
 
+
+
 2. To those that work in Barcelona, set "Jun1" in the class attribute, 
 and add a new skill to the list "SQL".
 To add elements in an array you can use .push()
@@ -25,6 +27,7 @@ console.log(sequence);
 function addSkill(mentors,newSkill){
   //your code here
 }
+
 
 5. Create a function to remove a skill to all members in a list of mentors
 
@@ -100,4 +103,17 @@ var mentors = [
 ];
 
 //YOUR CODE HERE
+mentors.forEach(function(mentor){
+  if(mentor.skills.includes("React")){
+    console.log(`Hi, my name is ${mentor.firstName} ${mentor.lastName}. I work in Barcelona and i know React.`)
+  }
+})
+let sq=mentors.forEach(function(mentor){
+  if(mentor.job.city=="barcelona"){
+    mentor.skills.push("SQL")
+  }
+})
+let addskikll=function(skill){
+  mentors.skills.push(skill)
 
+}

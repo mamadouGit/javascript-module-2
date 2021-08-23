@@ -16,8 +16,20 @@ let coffeeMachine = {
       flatWhite: 3.0,
     },
     insertedAmount: 0,
-    insertMoney: function (amount) {},
-    getCoffee: function (coffee) {},
+    insertMoney: function (amount) {
+      this.insertedAmount= amount
+    },
+    
+    getCoffee: function (coffeeType) {
+      const coffeePrice:[string, number]
+      const coffeePrice=Object.entries(this.prices).filter(entry=>{
+        return entry[0].toLowerCase()===coffeeType.toLowerCase()
+      })
+      if(!!coffeePrice && this.insertedAmount>= coffeeType){
+      return `Please take your ${coffeeType}`}
+    
+      return `sorry youdo not have enough money for${coffeeType}`
+    },
   };
   
   /*

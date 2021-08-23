@@ -19,17 +19,31 @@ let person3 = {
     age: 20
 };
 
+
+ 
+
+
 /*
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
 
-let persons = // Complete here
+let persons = [person1,person2,person3];// Complete here
+console.log(persons);
+let personNames =persons.map(function(person){
+    return person.name
+}) 
+console.log(personNames)
+// Complete here
 
-let personNames = // Complete here
 
-let personsYoungerThan28YearsOld = // Complete here
+
+let personsYoungerThan28YearsOld = persons.filter(function(person){
+    return person.age<=28
+})  
+console.log(personsYoungerThan28YearsOld)
+// Complete here
 
 
 /*

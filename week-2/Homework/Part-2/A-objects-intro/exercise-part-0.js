@@ -11,3 +11,11 @@ let laptop = {
     screenSize: 13,
     isTouchscreen: true,
   };
+  let mycomp={
+    brand:"hp",
+    model:"MD234",
+    hardDisk:"1000gb",
+    colored:"red",
+    screen:"300 ",
+    bluetooth:"oui"
+  }
