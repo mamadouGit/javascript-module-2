@@ -56,12 +56,70 @@ var movies = [
     type: "horror",
     haveWatched: false,
   },
+  {
+    title: "think like a man",
+    director: " kevin hart",
+    type:"comedy"
+  },
+   
 ];
 
 // create showMovies function
+const allmov=document.getElementById("all-movies");
+const movnumber=document.getElementById("movies-number")
+function showMovies(movies){
+  if(!Array.isArray(movies))return
+  movies.forEach(mov)
+    {const pmov=document.createElement("p");
+    const{title,director}=movie
+    pmov.textContent=`${title}, direcred by ${director}`;
+    allmov.appendChild(pmov)
+  }
+
+  
+}
 
 
 // create a new movie object for your favorite movie
 
+const fav={
+  title:"think like a man",
+  director:"kevin",
+  type:"comedy",
+  haveWatched:true
+
+}
+
+
 
 // create addMovies function
+function addMovies(movie){
+  const pmov=document.createElement("p");
+  const{title,director}=movie 
+  pmov.textContent=`${title}, direcred by ${director}`;
+  allmov.appendChild(pmov)
+  
+}
+setTimeout(function(){return showMovies(movies),1000})
+setTimeout(function(){return showMovies(movies),2000})
+//form
+const form=document.createElement("form")
+allmov.before(form)
+const samplemov=movies[0]
+Object.keys(samplemov).forEach(function(key){
+  const inputmov =document.createElement("input")
+  inputmov.setAttribute("id",key)
+  inputmov.placeholder=key
+  form.appendChild(inputmov)
+})
+const sav=document.createElement("button")
+sav.textContent="save"
+form.appendChild(sav)
+form.addEventListener("submit",onsave)
+function onsave(ev){
+  ev.preventDefault()
+
+}
+const newmov ={}
+Object.keys(samplemov).forEach(key=>{newmov[key]=ev.target.elements[key.value]})
+
